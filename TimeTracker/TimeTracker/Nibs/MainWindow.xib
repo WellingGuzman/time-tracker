@@ -8,7 +8,11 @@
         <customObject id="-2" userLabel="File's Owner" customClass="MainWindowController">
             <connections>
                 <outlet property="_button" destination="r2G-XT-ucU" id="Jbh-KL-9EO"/>
+                <outlet property="dateTimeView" destination="fbx-bY-vLt" id="lEB-RJ-uWO"/>
+                <outlet property="dateTimeViewController" destination="JtW-CW-4kN" id="VGZ-NA-pah"/>
                 <outlet property="imageView" destination="OWq-HY-c8Q" id="3jJ-Sm-k2Q"/>
+                <outlet property="todayView" destination="Oe0-tU-uxL" id="euu-3d-OUl"/>
+                <outlet property="todayViewController" destination="quj-3j-Cic" id="Til-Pd-6JA"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="3B8-YE-E3F"/>
             </connections>
         </customObject>
@@ -16,20 +20,28 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" closable="YES" resizable="YES"/>
-            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="240" width="480" height="180"/>
+            <windowPositionMask key="initialPositionMask" bottomStrut="YES"/>
+            <rect key="contentRect" x="0.0" y="0.0" width="1680" height="180"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="180"/>
+                <rect key="frame" x="0.0" y="0.0" width="1680" height="180"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OWq-HY-c8Q">
-                        <rect key="frame" x="278" y="-3" width="205" height="186"/>
+                        <rect key="frame" x="627" y="-3" width="205" height="186"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="photo" id="stQ-1v-OMA"/>
                     </imageView>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oe0-tU-uxL">
+                        <rect key="frame" x="246" y="0.0" width="218" height="180"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    </customView>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fbx-bY-vLt">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="180"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    </customView>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r2G-XT-ucU">
-                        <rect key="frame" x="20" y="80" width="108" height="19"/>
+                        <rect key="frame" x="514" y="80" width="108" height="19"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="roundRect" title="Take Screenshot" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="rdB-kV-g8f">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -41,7 +53,9 @@
                     </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="139" y="116"/>
+            <point key="canvasLocation" x="-3040" y="116"/>
         </window>
+        <customObject id="quj-3j-Cic" userLabel="TodayController" customClass="TodayViewController"/>
+        <customObject id="JtW-CW-4kN" customClass="DateTimeViewController"/>
     </objects>
 </document>

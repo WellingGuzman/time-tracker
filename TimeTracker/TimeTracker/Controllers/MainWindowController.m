@@ -7,10 +7,16 @@
 //
 
 #import "MainWindowController.h"
+#import "TodayViewController.h"
+#import "DateTimeViewController.h"
 
 @interface MainWindowController ()
 
 @property (nonatomic, assign) IBOutlet NSImageView *imageView;
+@property (nonatomic, assign) IBOutlet NSView *todayView;
+@property (nonatomic, assign) IBOutlet TodayViewController *todayViewController;
+@property (nonatomic, assign) IBOutlet NSView *dateTimeView;
+@property (nonatomic, assign) IBOutlet DateTimeViewController *dateTimeViewController;
 
 @end
 
@@ -20,6 +26,10 @@
     [super windowDidLoad];
     
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+
+    // Add Date Time view 
+    [_dateTimeView addSubview:[_dateTimeViewController view]];
+    [[_dateTimeViewController view] setFrame:[_dateTimeView bounds]];
 }
 
 - (IBAction)takeScreenshot:(id)sender
