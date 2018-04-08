@@ -27,9 +27,6 @@
     [_timer release];
     _timer = nil;
 
-    [_locationManager release];
-    _locationManager = nil;
-
     [super dealloc];
 }
 - (NSNibName)nibName
@@ -44,14 +41,6 @@
     
     [self updateTime:nil];
     _timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(updateTime:) userInfo:nil repeats:YES];
-    
-    
-    // Get location
-    _locationManager = [[CLLocationManager alloc] init];
-    _locationManager.delegate = self;
-    _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    
-    [_locationManager startUpdatingLocation];
 }
 
 - (void)updateTime:(NSTimer *)timer
@@ -77,36 +66,6 @@
     // Day of the week
     [_dateFormatter setDateFormat:@"EEEE"];
     [_dayOfTheWeekLabel setStringValue:[_dateFormatter stringFromDate:date]];
-}
-
-- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
-{
-    NSLog(@"didFailWithError: %@", error);
-    NSAlert *errorAlert = [[NSAlert alloc] init];
-    
-    [errorAlert addButtonWithTitle:@"OK"];
-    [errorAlert addButtonWithTitle:@"Cancel"];
-    [errorAlert setMessageText:@"Failed to Get Your Location"];
-    [errorAlert setInformativeText:@"Deleted records cannot be restored."];
-    [errorAlert setAlertStyle:NSAlertStyleWarning];
-}
-
-- (void)locationManager:(CLLocationManager *)manager
-didUpdateLocations:(NSArray<CLLocation *> *)locations
-{
-    NSLog(@"updated!");
-}
-
-- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
-{
-    NSLog(@"didUpdateToLocation: %@", newLocation);
-    CLLocation *currentLocation = newLocation;
-    
-    if (currentLocation != nil) {
-        NSLog(@"%f,%f", currentLocation.coordinate.latitude, currentLocation.coordinate.latitude);
-//        longitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
-//        latitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
-    }
 }
 
 @end

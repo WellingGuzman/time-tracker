@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24640D65206EA64400097DA5 /* DateTime.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24640D64206EA64400097DA5 /* DateTime.xib */; };
+		24640D68206EA67A00097DA5 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24640D67206EA67A00097DA5 /* TodayViewController.m */; };
+		24640D71206F583500097DA5 /* DateTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24640D6F206F583500097DA5 /* DateTimeViewController.m */; };
+		24640D72206F583500097DA5 /* DateTimeView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24640D70206F583500097DA5 /* DateTimeView2.xib */; };
+		24640D74206F651100097DA5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24640D73206F651100097DA5 /* CoreLocation.framework */; };
 		248ADCAD2068AE6A00CB37C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 248ADCAC2068AE6A00CB37C2 /* AppDelegate.m */; };
 		248ADCAF2068AE6A00CB37C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 248ADCAE2068AE6A00CB37C2 /* Assets.xcassets */; };
 		248ADCB22068AE6A00CB37C2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 248ADCB02068AE6A00CB37C2 /* MainMenu.xib */; };
@@ -16,6 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24640D64206EA64400097DA5 /* DateTime.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateTime.xib; sourceTree = "<group>"; };
+		24640D66206EA67A00097DA5 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		24640D67206EA67A00097DA5 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		24640D6E206F583500097DA5 /* DateTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateTimeViewController.h; sourceTree = "<group>"; };
+		24640D6F206F583500097DA5 /* DateTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateTimeViewController.m; sourceTree = "<group>"; };
+		24640D70206F583500097DA5 /* DateTimeView2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateTimeView2.xib; sourceTree = "<group>"; };
+		24640D73206F651100097DA5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		248ADCA82068AE6900CB37C2 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		248ADCAB2068AE6900CB37C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		248ADCAC2068AE6A00CB37C2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -34,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24640D74206F651100097DA5 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +56,7 @@
 		24640D57206D02D600097DA5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24640D73206F651100097DA5 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -52,6 +66,10 @@
 			children = (
 				24B45B70206A5EE6001D8D62 /* MainWindowController.h */,
 				24B45B71206A5EE6001D8D62 /* MainWindowController.m */,
+				24640D66206EA67A00097DA5 /* TodayViewController.h */,
+				24640D67206EA67A00097DA5 /* TodayViewController.m */,
+				24640D6E206F583500097DA5 /* DateTimeViewController.h */,
+				24640D6F206F583500097DA5 /* DateTimeViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -91,8 +109,10 @@
 		24B45B6D206A5E96001D8D62 /* Nibs */ = {
 			isa = PBXGroup;
 			children = (
+				24640D70206F583500097DA5 /* DateTimeView2.xib */,
 				24B45B6E206A5ECC001D8D62 /* MainWindow.xib */,
 				248ADCB02068AE6A00CB37C2 /* MainMenu.xib */,
+				24640D64206EA64400097DA5 /* DateTime.xib */,
 			);
 			path = Nibs;
 			sourceTree = "<group>";
@@ -156,6 +176,8 @@
 			files = (
 				248ADCAF2068AE6A00CB37C2 /* Assets.xcassets in Resources */,
 				248ADCB22068AE6A00CB37C2 /* MainMenu.xib in Resources */,
+				24640D65206EA64400097DA5 /* DateTime.xib in Resources */,
+				24640D72206F583500097DA5 /* DateTimeView2.xib in Resources */,
 				24B45B6F206A5ECC001D8D62 /* MainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,7 +189,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24640D68206EA67A00097DA5 /* TodayViewController.m in Sources */,
 				24B45B72206A5EE6001D8D62 /* MainWindowController.m in Sources */,
+				24640D71206F583500097DA5 /* DateTimeViewController.m in Sources */,
 				248ADCB52068AE6A00CB37C2 /* main.m in Sources */,
 				248ADCAD2068AE6A00CB37C2 /* AppDelegate.m in Sources */,
 			);

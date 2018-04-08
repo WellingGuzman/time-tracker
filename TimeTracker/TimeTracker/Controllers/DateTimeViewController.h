@@ -9,11 +9,10 @@
 #import <Cocoa/Cocoa.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface DateTimeViewController : NSViewController <CLLocationManagerDelegate>
+@interface DateTimeViewController : NSViewController
 {
     NSTimer *_timer;
     NSDateFormatter *_dateFormatter;
-    CLLocationManager *_locationManager;
 }
 
 - (void) updateTime:(NSTimer *)timer;

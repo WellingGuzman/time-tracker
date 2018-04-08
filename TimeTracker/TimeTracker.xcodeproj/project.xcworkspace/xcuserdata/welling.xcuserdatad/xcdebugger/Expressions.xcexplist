@@ -6,6 +6,9 @@
          contextName = "-[MainWindowController windowDidLoad]:MainWindowController.m">
          <PersistentStrings>
             <PersistentString
+               value = "self.todayView">
+            </PersistentString>
+            <PersistentString
                value = "track.artist">
             </PersistentString>
          </PersistentStrings>
