@@ -30,6 +30,8 @@
     // Add Date Time view 
     [_dateTimeView addSubview:[_dateTimeViewController view]];
     [[_dateTimeViewController view] setFrame:[_dateTimeView bounds]];
+
+    [[self.window.contentView layer] setBackgroundColor:[[NSColor whiteColor] CGColor]];
 }
 
 - (IBAction)takeScreenshot:(id)sender
