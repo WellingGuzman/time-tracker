@@ -92,7 +92,11 @@
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:weatherURL];
 
     NSURLSessionDataTask *requestTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *connectionError) {
-        NSDictionary *dir = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+        NSDictionary *dir;
+
+        if (!response) return;
+
+        dir = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
 
         if (connectionError != nil) return;
         if ([dir count] == 0) return;
