@@ -15,4 +15,6 @@
     AVCaptureVideoPreviewLayer *_previewLayer;
 }
 
+- (void)initCameraPreview;
+
 @end

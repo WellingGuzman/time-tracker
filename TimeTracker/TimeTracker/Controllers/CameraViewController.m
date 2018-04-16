@@ -22,6 +22,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
+
+    [self initCameraPreview];
+}
+
+- (void)initCameraPreview
+{
     AVCaptureDeviceInput *input;
 
     [[self view] setWantsLayer: YES];
