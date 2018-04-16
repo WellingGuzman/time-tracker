@@ -14,10 +14,8 @@
         </customView>
         <customObject id="vqs-8K-icp" customClass="CameraViewController">
             <connections>
-                <outlet property="cameraView" destination="3uy-A7-t1M" id="ufv-Cy-Hsf"/>
                 <outlet property="view" destination="c22-O7-iKe" id="yCk-EV-HfF"/>
             </connections>
         </customObject>
-        <customObject id="3uy-A7-t1M" customClass="CameraView"/>
     </objects>
 </document>

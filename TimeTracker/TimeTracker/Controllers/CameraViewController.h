@@ -8,11 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 #import <AVFoundation/AVFoundation.h>
-#import "CameraView.h"
 
 @interface CameraViewController : NSViewController
 {
-    CameraView *_camerView;
     AVCaptureSession *_session;
     AVCaptureVideoPreviewLayer *_previewLayer;
 }

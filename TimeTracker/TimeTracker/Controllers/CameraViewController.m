@@ -10,8 +10,6 @@
 
 @interface CameraViewController ()
 
-@property (nonatomic, assign) IBOutlet CameraView *cameraView;
-
 @end
 
 @implementation CameraViewController
@@ -25,12 +23,9 @@
     [super viewDidLoad];
     // Do view setup here.
     AVCaptureDeviceInput *input;
-    
-    _camerView = [[CameraView alloc] initWithFrame:[self.view bounds]];
-    
+
     [[self view] setWantsLayer: YES];
-    [[self view] addSubview:_camerView];
-    
+
     _session = [[AVCaptureSession alloc] init];
     if ([_session canSetSessionPreset:AVCaptureSessionPresetHigh]) {
         [_session setSessionPreset:AVCaptureSessionPresetHigh];
@@ -40,7 +35,7 @@
     for (AVCaptureDevice *device in devices) {
         NSLog(@"%@", device);
     }
-    
+
     input = [[AVCaptureDeviceInput alloc] initWithDevice:devices[0] error:nil];
 
     if ([_session canAddInput:input]) {
@@ -51,8 +46,7 @@
     [_previewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
     [_previewLayer setBounds:[self.view bounds]];
     [self.view.layer addSublayer:_previewLayer];
-    
-    
+
     [_session startRunning];
 }
 
