@@ -8,11 +8,10 @@
         <customObject id="-2" userLabel="File's Owner" customClass="MainWindowController">
             <connections>
                 <outlet property="_button" destination="r2G-XT-ucU" id="Jbh-KL-9EO"/>
+                <outlet property="cameraViewController" destination="Srf-uy-gfa" id="SJA-kS-wwN"/>
                 <outlet property="dateTimeView" destination="fbx-bY-vLt" id="lEB-RJ-uWO"/>
                 <outlet property="dateTimeViewController" destination="JtW-CW-4kN" id="VGZ-NA-pah"/>
                 <outlet property="imageView" destination="OWq-HY-c8Q" id="3jJ-Sm-k2Q"/>
-                <outlet property="todayView" destination="Oe0-tU-uxL" id="euu-3d-OUl"/>
-                <outlet property="todayViewController" destination="quj-3j-Cic" id="Til-Pd-6JA"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="3B8-YE-E3F"/>
             </connections>
         </customObject>
@@ -55,7 +54,12 @@
             </view>
             <point key="canvasLocation" x="-3040" y="116"/>
         </window>
-        <customObject id="quj-3j-Cic" userLabel="TodayController" customClass="TodayViewController"/>
+        <customObject id="quj-3j-Cic" userLabel="TodayController" customClass="CameraViewController"/>
         <customObject id="JtW-CW-4kN" customClass="DateTimeViewController"/>
+        <customObject id="Srf-uy-gfa" customClass="CameraViewController">
+            <connections>
+                <outlet property="view" destination="Oe0-tU-uxL" id="Lr1-mD-oYU"/>
+            </connections>
+        </customObject>
     </objects>
 </document>

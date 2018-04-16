@@ -9,6 +9,7 @@
 #import "MainWindowController.h"
 #import "TodayViewController.h"
 #import "DateTimeViewController.h"
+#import "CameraViewController.h"
 
 @interface MainWindowController ()
 
@@ -17,6 +18,8 @@
 @property (nonatomic, assign) IBOutlet TodayViewController *todayViewController;
 @property (nonatomic, assign) IBOutlet NSView *dateTimeView;
 @property (nonatomic, assign) IBOutlet DateTimeViewController *dateTimeViewController;
+@property (nonatomic, assign) IBOutlet NSView *cameraView;
+@property (nonatomic, assign) IBOutlet CameraViewController *cameraViewController;
 
 @end
 
